@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Simples</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .calculadora {
+            width: 300px;
+            margin: 100px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+        input {
+            width: 90%;
+            margin-bottom: 10px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            width: 45%;
+            padding: 10px;
+            margin: 5px;
+            font-size: 16px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculadora">
+        <h1>Calculadora</h1>
+        <input type="text" id="resultado" placeholder="0" readonly>
+        <br>
+        <button onclick="adicionarValor('7')">7</button>
+        <button onclick="adicionarValor('8')">8</button>
+        <button onclick="adicionarValor('9')">9</button>
+        <button onclick="adicionarValor('+')">+</button>
+        <br>
+        <button onclick="adicionarValor('4')">4</button>
+        <button onclick="adicionarValor('5')">5</button>
+        <button onclick="adicionarValor('6')">6</button>
+        <button onclick="adicionarValor('-')">-</button>
+        <br>
+        <button onclick="adicionarValor('1')">1</button>
+        <button onclick="adicionarValor('2')">2</button>
+        <button onclick="adicionarValor('3')">3</button>
+        <button onclick="adicionarValor('*')">*</button>
+        <br>
+        <button onclick="adicionarValor('0')">0</button>
+        <button onclick="calcular()">=</button>
+        <button onclick="adicionarValor('/')">/</button>
+        <button onclick="limpar()">C</button>
+    </div>
+
+    <script>
+        function adicionarValor(valor) {
+            document.getElementById('resultado').value += valor;
+        }
+
+        function calcular() {
+            try {
+                let expressao = document.getElementById('resultado').value;
+                let resultado = eval(expressao);
+                document.getElementById('resultado').value = resultado;
+            } catch (error) {
+                alert("Expressão inválida!");
+            }
+        }
+
+        function limpar() {
+            document.getElementById('resultado').value = '';
+        }
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Simples</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .calculadora {
+            width: 300px;
+            margin: 100px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+        input {
+            width: 90%;
+            margin-bottom: 10px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            width: 45%;
+            padding: 10px;
+            margin: 5px;
+            font-size: 16px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculadora">
+        <h1>Calculadora</h1>
+        <input type="text" id="resultado" placeholder="0" readonly>
+        <br>
+        <button onclick="adicionarValor('7')">7</button>
+        <button onclick="adicionarValor('8')">8</button>
+        <button onclick="adicionarValor('9')">9</button>
+        <button onclick="adicionarValor('+')">+</button>
+        <br>
+        <button onclick="adicionarValor('4')">4</button>
+        <button onclick="adicionarValor('5')">5</button>
+        <button onclick="adicionarValor('6')">6</button>
+        <button onclick="adicionarValor('-')">-</button>
+        <br>
+        <button onclick="adicionarValor('1')">1</button>
+        <button onclick="adicionarValor('2')">2</button>
+        <button onclick="adicionarValor('3')">3</button>
+        <button onclick="adicionarValor('*')">*</button>
+        <br>
+        <button onclick="adicionarValor('0')">0</button>
+        <button onclick="calcular()">=</button>
+        <button onclick="adicionarValor('/')">/</button>
+        <button onclick="limpar()">C</button>
+    </div>
+
+    <script>
+        function adicionarValor(valor) {
+            document.getElementById('resultado').value += valor;
+        }
+
+        function calcular() {
+            try {
+                let expressao = document.getElementById('resultado').value;
+                let resultado = eval(expressao);
+                document.getElementById('resultado').value = resultado;
+            } catch (error) {
+                alert("Expressão inválida!");
+            }
+        }
+
+        function limpar() {
+            document.getElementById('resultado').value = '';
+        }
+    </script>
+</body>
+</html>
